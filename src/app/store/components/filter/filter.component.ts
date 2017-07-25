@@ -1,10 +1,12 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Filter } from './../../../_models/filter';
+import { BookLanguage } from './../../../_models/book';
 
 const MAX_COST = 10;
 const MAX_DATE = 2020;
+const MIN_DATE = 1970;
 
 @Component({
 	selector: 'store-filter',
@@ -17,17 +19,15 @@ export class FilterComponent implements OnInit, OnChanges {
 
 	filterForm: FormGroup
 
-	constructor(
-		private fb: FormBuilder
-	) {
-		this.filterForm = this.fb.group({
-			costFrom: ['', []],
-			costTo: ['', []],
-			ratingFrom: ['', []],
-			ratingTo: ['', []],
-			dateFrom: ['', []],
-			dateTo: ['', []],
-			lang: ['', []]
+	constructor() {
+		this.filterForm = new FormGroup({
+			costFrom:  new FormControl(),
+			costTo:  new FormControl(),
+			ratingFrom:  new FormControl(),
+			ratingTo:  new FormControl(),
+			dateFrom:  new FormControl(),
+			dateTo:  new FormControl(),
+			lang:  new FormControl()
 		});
 	}
 
@@ -49,30 +49,13 @@ export class FilterComponent implements OnInit, OnChanges {
 	}
 
 	ngOnChanges() {
-		let costFrom = (this.filterForm.controls['costFrom'] as FormControl);
-		let costTo = (this.filterForm.controls['costTo'] as FormControl);
-		let ratingFrom = (this.filterForm.controls['ratingFrom'] as FormControl);
-		let ratingTo = (this.filterForm.controls['ratingTo'] as FormControl);
-		let dateFrom = (this.filterForm.controls['dateFrom'] as FormControl);
-		let dateTo = (this.filterForm.controls['dateTo'] as FormControl);
-		let lang = (this.filterForm.controls['lang'] as FormControl);
-
-		costFrom.setValue(this.filter.cost.from);
-		costFrom.setValidators([Validators.min(0), Validators.max(this.filter.cost.to)]);
-		costTo.setValue(this.filter.cost.to);
-		costTo.setValidators([Validators.min(this.filter.cost.from), Validators.max(MAX_COST)]);
-
-		ratingFrom.setValue(this.filter.rating.from);
-		ratingFrom.setValidators([Validators.min(0), Validators.max(this.filter.rating.to)]);
-		ratingTo.setValue(this.filter.rating.to);
-		ratingTo.setValidators([Validators.min(this.filter.rating.from), Validators.max(5)]);
-
-		dateFrom.setValue(this.filter.date.from);
-		dateFrom.setValidators([Validators.min(1970), Validators.max(this.filter.date.to)]);
-		dateTo.setValue(this.filter.date.to);
-		dateTo.setValidators([Validators.min(this.filter.date.from), Validators.max(MAX_DATE)]);
-
-		lang.setValue(this.filter.lang);
+		this.filterForm.setControl('costFrom', new FormControl(this.filter.cost.from, [Validators.min(0), Validators.max(this.filter.cost.to)]));
+		this.filterForm.setControl('costTo', new FormControl(this.filter.cost.to, [Validators.min(this.filter.cost.from), Validators.max(MAX_COST)]));
+		this.filterForm.setControl('ratingFrom', new FormControl(this.filter.rating.from, [Validators.min(0), Validators.max(this.filter.rating.to)]));
+		this.filterForm.setControl('ratingTo', new FormControl(this.filter.rating.to, [Validators.min(this.filter.rating.from), Validators.max(5)]));
+		this.filterForm.setControl('dateFrom', new FormControl(this.filter.date.from, [Validators.min(MIN_DATE), Validators.max(this.filter.date.to)]));
+		this.filterForm.setControl('dateTo', new FormControl(this.filter.date.to, [Validators.min(this.filter.date.from), Validators.max(MAX_DATE)]));
+		this.filterForm.setControl('lang', new FormControl(this.filter.lang, []));
 	}
 
 	ngOnInit() {}
