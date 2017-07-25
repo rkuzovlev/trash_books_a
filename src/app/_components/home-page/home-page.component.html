@@ -1,0 +1,7 @@
+<div class="columns">
+	<store-filter [filter]="filter" (changed)="filterChanged.emit($event)" class="column is-one-quarter"></store-filter>
+
+	<div class="column">
+		<store-list [filter]="filter" [books]="books" class="columns is-multiline is-desktop"></store-list> 
+	</div>
+</div>

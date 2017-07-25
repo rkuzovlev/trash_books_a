@@ -1,0 +1,11 @@
+<div class="container">
+	<app-nav></app-nav>
+
+	<div class="section">
+		<app-home-page 
+			[filter]="filter$ | async" 
+			[books]="books$ | async"
+			(filterChanged)="onFilterChanged($event)"
+		></app-home-page>
+	</div>
+</div>

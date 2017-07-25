@@ -1,0 +1,19 @@
+.card-image figure {
+    img {
+        height: 400px;
+        width: auto;
+        max-width: 100%;
+        margin: auto;
+    }
+}
+
+.card-content .content {
+    .options span {
+        padding-right: 10px;
+        display: inline-block;
+    }
+}
+
+footer a {
+    user-select: none;
+}

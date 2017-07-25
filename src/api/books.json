@@ -1,0 +1,615 @@
+[
+    {
+        "id": 1,
+        "title": "Как меня не взяли в армию",
+        "img": "/assets/img/books/1394719411_02.jpg",
+        "rating": 1.7,
+        "date": 400547931000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.7
+    }, {
+        "id": 2,
+        "title": "PACMAN, вчера и сегодня",
+        "img": "/assets/img/books/1394719321_03.jpg",
+        "rating": 3.36,
+        "date": 674775035000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.5
+    }, {
+        "id": 3,
+        "title": "Полупрозрачность как элемент дизайна",
+        "img": "/assets/img/books/1394719396_04.jpg",
+        "rating": 4.24,
+        "date": 214639938000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.1
+    }, {
+        "id": 4,
+        "title": "Ты с какова раёна?",
+        "img": "/assets/img/books/1394719349_05.jpg",
+        "rating": 2.91,
+        "date": 245200455000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.8
+    }, {
+        "id": 5,
+        "title": "Занимательная проктология",
+        "img": "/assets/img/books/1394719414_06.jpg",
+        "rating": 2.68,
+        "date": 45610457000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.1
+    }, {
+        "id": 6,
+        "title": "Блядь, где я?",
+        "img": "/assets/img/books/1394719395_07.jpg",
+        "rating": 2.95,
+        "date": 104693205000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.1
+    }, {
+        "id": 7,
+        "title": "Кровавые игры юных пионеров",
+        "img": "/assets/img/books/1394719375_08.jpg",
+        "rating": 3.90,
+        "date": 774703086000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.5
+    }, {
+        "id": 8,
+        "title": "Охота на крокодила со спиннингом на средней волге",
+        "img": "/assets/img/books/1394719383_09.jpg",
+        "rating": 3.51,
+        "date": 929805411000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.0
+    }, {
+        "id": 9,
+        "title": "Как незаметно прикрыть дыру в пространственно-временном континууме",
+        "img": "/assets/img/books/1394719342_10.jpg",
+        "rating": 4.49,
+        "date": 645500957000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.5
+    }, {
+        "id": 10,
+        "title": "В японию без виз",
+        "img": "/assets/img/books/1394719414_12.jpg",
+        "rating": 2.1,
+        "date": 211520309000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.8
+    }, {
+        "id": 11,
+        "title": "Я живу в бутылке, откровения юного алкоголика",
+        "img": "/assets/img/books/1394719419_14.jpg",
+        "rating": 1.59,
+        "date": 220633430000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.2
+    }, {
+        "id": 12,
+        "title": "Вся правда о шаурме",
+        "img": "/assets/img/books/1394719321_15.jpg",
+        "rating": 4.39,
+        "date": 797897936000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.6
+    }, {
+        "id": 13,
+        "title": "Массаж медведя, знай и умей",
+        "img": "/assets/img/books/1394719376_16.jpg",
+        "rating": 2.13,
+        "date": 571518896000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.7
+    }, {
+        "id": 14,
+        "title": "Удивительные долбоёбы, поименный справочник дизайнеров детской литературы",
+        "img": "/assets/img/books/1394719331_20.jpg",
+        "rating": 3.12,
+        "date": 504543411000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.6
+    }, {
+        "id": 15,
+        "title": "Использование ручных пираний в партизанской войне",
+        "img": "/assets/img/books/1394719366_21.jpg",
+        "rating": 1.38,
+        "date": 895566501000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.4
+    }, {
+        "id": 16,
+        "title": "Совецкие галюциногенные грибы на орбитальной станции",
+        "img": "/assets/img/books/1394719398_22.jpg",
+        "rating": 3.15,
+        "date": 799671654000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.5
+    }, {
+        "id": 17,
+        "title": "Способы огородить себя от гомосеков на орбите.",
+        "img": "/assets/img/books/1394719379_01.jpg",
+        "rating": 4.53,
+        "date": 943268062000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.4
+    }, {
+        "id": 18,
+        "title": "Выбор отхожих мест на планетах с низкой гравитацией",
+        "img": "/assets/img/books/1394719410_23.jpg",
+        "rating": 2.5,
+        "date": 231940479000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.9
+    }, {
+        "id": 19,
+        "title": "Космодром, космонавты, куклусклан",
+        "img": "/assets/img/books/1394719341_24.jpg",
+        "rating": 3.81,
+        "date": 257157571000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.7
+    }, {
+        "id": 20,
+        "title": "Теплый ламповый дизайн",
+        "img": "/assets/img/books/1394719382_25.jpg",
+        "rating": 3.36,
+        "date": 77564024000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.2
+    }, {
+        "id": 21,
+        "title": "Колька и мертвый Ленин",
+        "img": "/assets/img/books/1394719361_27.jpg",
+        "rating": 2.25,
+        "date": 599649057000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.3
+    }, {
+        "id": 22,
+        "title": "Небесная ебанистика",
+        "img": "/assets/img/books/1394719356_28.jpg",
+        "rating": 2.40,
+        "date": 499002522000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.8
+    }, {
+        "id": 23,
+        "title": "Как тырить лампочки из фонарей",
+        "img": "/assets/img/books/1394719396_29.jpg",
+        "rating": 2.97,
+        "date": 610111919000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.1
+    }, {
+        "id": 24,
+        "title": "Ритуальное подвешивание",
+        "img": "/assets/img/books/1394719366_30.jpg",
+        "rating": 1.31,
+        "date": 781522419000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.9
+    }, {
+        "id": 25,
+        "title": "Держим равновесие с помошью сабли. Пособие для всадников.",
+        "img": "/assets/img/books/1394719414_32.jpg",
+        "rating": 1.31,
+        "date": 834730180000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.5
+    }, {
+        "id": 26,
+        "title": "Как правильно реагировать когда ваш малыш рисует поебень.",
+        "img": "/assets/img/books/1394719359_33.jpg",
+        "rating": 3.65,
+        "date": 483251820000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.1
+    }, {
+        "id": 27,
+        "title": "Морская кавалерия",
+        "img": "/assets/img/books/1394719360_36.jpg",
+        "rating": 3.92,
+        "date": 220002300000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.4
+    }, {
+        "id": 28,
+        "title": "Противоармагидонные зонты",
+        "img": "/assets/img/books/1394719370_37.jpg",
+        "rating": 4.68,
+        "date": 601071079000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.8
+    }, {
+        "id": 29,
+        "title": "Шоу фрая и бендера",
+        "img": "/assets/img/books/1394719382_39.jpg",
+        "rating": 3.62,
+        "date": 474623330000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.6
+    }, {
+        "id": 30,
+        "title": "О пользе сыроедения",
+        "img": "/assets/img/books/1394719419_41.jpg",
+        "rating": 3.41,
+        "date": 231996070000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.3
+    }, {
+        "id": 31,
+        "title": "Галюцинации при высоком давлении",
+        "img": "/assets/img/books/1394719403_42.jpg",
+        "rating": 3.20,
+        "date": 359060443000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.5
+    }, {
+        "id": 32,
+        "title": "Позы для сидения перед ноутбуком",
+        "img": "/assets/img/books/tn.jpg",
+        "rating": 2.34,
+        "date": 502261149000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.8
+    }, {
+        "id": 33,
+        "title": "Рукопашный бой в условиях невисомости",
+        "img": "/assets/img/books/knigi-001.jpg",
+        "rating": 2.43,
+        "date": 235342329000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.8
+    }, {
+        "id": 34,
+        "title": "Боевой бадминтон, история и практика",
+        "img": "/assets/img/books/knigi-002.jpg",
+        "rating": 3.46,
+        "date": 597946904000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.6
+    }, {
+        "id": 35,
+        "title": "Бой танков с тачанками",
+        "img": "/assets/img/books/knigi-003.jpg",
+        "rating": 3.1,
+        "date": 782807902000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.0
+    }, {
+        "id": 36,
+        "title": "ТАРАН, оружие героев",
+        "img": "/assets/img/books/knigi-007.jpg",
+        "rating": 2.66,
+        "date": 539267950000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.6
+    }, {
+        "id": 37,
+        "title": "Основы пикапа",
+        "img": "/assets/img/books/knigi-009.jpg",
+        "rating": 1.20,
+        "date": 371983277000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.6
+    }, {
+        "id": 38,
+        "title": "Из селитры и фольги",
+        "img": "/assets/img/books/knigi-014.jpg",
+        "rating": 1.63,
+        "date": 444056651000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.1
+    }, {
+        "id": 39,
+        "title": "Красная полоса на синем фоне",
+        "img": "/assets/img/books/knigi-017.jpg",
+        "rating": 3.77,
+        "date": 171499342000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.6
+    }, {
+        "id": 40,
+        "title": "Как пережить наводнение, используя шагающую лодку с колесами",
+        "img": "/assets/img/books/knigi-018.jpg",
+        "rating": 1.59,
+        "date": 150969723000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.0
+    }, {
+        "id": 41,
+        "title": "Животные под бутиратом",
+        "img": "/assets/img/books/knigi-022.jpg",
+        "rating": 1.24,
+        "date": 684158392000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.3
+    }, {
+        "id": 42,
+        "title": "Борщ, как средство единения семьи",
+        "img": "/assets/img/books/knigi-023.jpg",
+        "rating": 1.76,
+        "date": 826062980000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.2
+    }, {
+        "id": 43,
+        "title": "Пособие как угнать танк за 60 секунд",
+        "img": "/assets/img/books/knigi-027.jpg",
+        "rating": 3.58,
+        "date": 227838089000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.5
+    }, {
+        "id": 44,
+        "title": "Приготовление ягод и снадобий для любознательных",
+        "img": "/assets/img/books/knigi-029.jpg",
+        "rating": 3.47,
+        "date": 45296120000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.5
+    }, {
+        "id": 45,
+        "title": "Вайфай, правда или вымысел?",
+        "img": "/assets/img/books/knigi-030.jpg",
+        "rating": 1.10,
+        "date": 803100458000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.5
+    }, {
+        "id": 46,
+        "title": "Проблемы автостопа в открытом космосе",
+        "img": "/assets/img/books/knigi-031.jpg",
+        "rating": 3.19,
+        "date": 596683525000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.5
+    }, {
+        "id": 47,
+        "title": "Что делать, если ваш сын нашел плутоний?",
+        "img": "/assets/img/books/knigi-032.jpg",
+        "rating": 1.63,
+        "date": 262199188000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.0
+    }, {
+        "id": 48,
+        "title": "Адидас на защите отечества",
+        "img": "/assets/img/books/knigi-034.jpg",
+        "rating": 2.14,
+        "date": 390787082000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.0
+    }, {
+        "id": 49,
+        "title": "Повышение самооценки с помощью пойманной рыбы",
+        "img": "/assets/img/books/knigi-038.jpg",
+        "rating": 4.13,
+        "date": 893859237000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.5
+    }, {
+        "id": 50,
+        "title": "Археология американских низов",
+        "img": "/assets/img/books/Book_Archaeology_cover_001.gif",
+        "rating": 2.60,
+        "date": 559598189000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.4
+    }, {
+        "id": 51,
+        "title": "Злость баклажана",
+        "img": "/assets/img/books/Book_Aubergines_cover_001.gif",
+        "rating": 1.62,
+        "date": 191113619000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.0
+    }, {
+        "id": 52,
+        "title": "Лучше никогда не бывало",
+        "img": "/assets/img/books/Book_BetterNeverToHaveBeen_cover_001.gif",
+        "rating": 1.85,
+        "date": 738084791000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.1
+    }, {
+        "id": 53,
+        "title": "Бомбоубежище для вашей лошади",
+        "img": "/assets/img/books/Book_BombproofYourHorse_cover_001.gif",
+        "rating": 4.10,
+        "date": 921587164000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.6
+    }, {
+        "id": 54,
+        "title": "Исповедь монахини-язычницы",
+        "img": "/assets/img/books/Book_ConfessionsofaPaganNun_cover_001.gif",
+        "rating": 2.6,
+        "date": 751334741000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.8
+    }, {
+        "id": 55,
+        "title": "Койты, которых я знал",
+        "img": "/assets/img/books/Book_CoyotesIHaveKnown_cover_001.gif",
+        "rating": 3.51,
+        "date": 266489471000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.6
+    }, {
+        "id": 56,
+        "title": "Сумасшедшие ягодицы",
+        "img": "/assets/img/books/Book_CrazyButtocks_cover_001.gif",
+        "rating": 1.57,
+        "date": 709243357000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.8
+    }, {
+        "id": 57,
+        "title": "Невероятные маленькие евреи",
+        "img": "/assets/img/books/Book_FabulousSMallJews_cover_001.gif",
+        "rating": 1.67,
+        "date": 443328645000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.1
+    }, {
+        "id": 58,
+        "title": "Гроб вашей мечты",
+        "img": "/assets/img/books/Book_FancyCoffins_cover_001.gif",
+        "rating": 1.24,
+        "date": 624165755000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.0
+    }, {
+        "id": 59,
+        "title": "История бетона",
+        "img": "/assets/img/books/Book_HistoryofConcrete_cover_001.gif",
+        "rating": 4.22,
+        "date": 786690205000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.0
+    }, {
+        "id": 60,
+        "title": "Как нагадить в лесу",
+        "img": "/assets/img/books/Book_HowtoShitintheWoods_cover_001.gif",
+        "rating": 1.57,
+        "date": 470888838000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.9
+    }, {
+        "id": 61,
+        "title": "Итальянский без слов",
+        "img": "/assets/img/books/Book_ItalianWithoutWords_cover_001.gif",
+        "rating": 4.62,
+        "date": 186747852000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.3
+    }, {
+        "id": 62,
+        "title": "Эстетика японских коробок для ланча",
+        "img": "/assets/img/books/Book_JapaneseLunchbox_cover_001.gif",
+        "rating": 1.76,
+        "date": 544602944000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.1
+    }, {
+        "id": 63,
+        "title": "Вязание из собачьей шерсти",
+        "img": "/assets/img/books/Book_KnittingWithDogHair_cover_001.gif",
+        "rating": 3.79,
+        "date": 874397840000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.7
+    }, {
+        "id": 64,
+        "title": "Люди, которые не знали, что мертвы",
+        "img": "/assets/img/books/Book_KnowTheyreDead_cover_001.gif",
+        "rating": 3.24,
+        "date": 848298272000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.8
+    }, {
+        "id": 65,
+        "title": "Книга мармелада",
+        "img": "/assets/img/books/Book_Marmalade_cover_001.gif",
+        "rating": 4.11,
+        "date": 35015761000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.8
+    }, {
+        "id": 66,
+        "title": "Читающие пальцы ног",
+        "img": "/assets/img/books/Book_ReadingToes_cover_001.gif",
+        "rating": 3.97,
+        "date": 501356600000,
+        "lang": 1,
+        "description": "",
+        "cost": 2.1
+    }, {
+        "id": 67,
+        "title": "Вторичное использование могильных курганов",
+        "img": "/assets/img/books/Book_ReusingOldGraves_cover_001.gif",
+        "rating": 3.35,
+        "date": 763620932000,
+        "lang": 1,
+        "description": "",
+        "cost": 3.7
+    }, {
+        "id": 68,
+        "title": "Фальцовка чайных пакетиков",
+        "img": "/assets/img/books/Book_TeabagFolding_cover_001.gif",
+        "rating": 1.51,
+        "date": 735793876000,
+        "lang": 1,
+        "description": "",
+        "cost": 4.2
+    }
+]

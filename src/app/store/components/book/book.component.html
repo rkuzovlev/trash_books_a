@@ -1,0 +1,22 @@
+<div class="card book">
+	<div class="card-image">
+		<figure class="image">
+			<img alt="{{ book.title }}" src="{{ book.img }}">
+		</figure>
+	</div>
+	<div class="card-content">
+		<div class="content">
+			<h3>{{ book.title }}</h3>
+			<p><!-- description --></p>
+			<p class="options">
+				<span><i class="fa fa-calendar"></i> {{ book.date | date:'y' }}</span>
+				<span><i class="fa fa-language"></i> {{ book.lang | bookLang }}</span>
+				<span><i class="fa fa-usd"></i> {{ book.cost }}</span> <br>
+			</p>
+			<store-rating [rating]="book.rating" title="{{ book.rating }}"></store-rating>
+		</div>
+	</div>
+	<footer class="card-footer">
+		<a class="card-footer-item">Add to cart</a>
+	</footer>
+</div>

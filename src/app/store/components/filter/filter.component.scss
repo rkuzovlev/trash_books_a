@@ -1,0 +1,12 @@
+.small-controls {
+    input {
+        width: calc(50% - 20px);
+    }
+}
+
+.range span {
+    display: inline-block;
+    margin-left: 11px;
+    margin-right: 11px;
+    vertical-align: sub;
+}
