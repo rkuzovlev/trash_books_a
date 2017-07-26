@@ -446,7 +446,7 @@
         "img": "/assets/img/books/Book_Archaeology_cover_001.gif",
         "rating": 2.60,
         "date": 559598189000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 2.4
     }, {
@@ -455,7 +455,7 @@
         "img": "/assets/img/books/Book_Aubergines_cover_001.gif",
         "rating": 1.62,
         "date": 191113619000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.0
     }, {
@@ -464,7 +464,7 @@
         "img": "/assets/img/books/Book_BetterNeverToHaveBeen_cover_001.gif",
         "rating": 1.85,
         "date": 738084791000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 3.1
     }, {
@@ -473,7 +473,7 @@
         "img": "/assets/img/books/Book_BombproofYourHorse_cover_001.gif",
         "rating": 4.10,
         "date": 921587164000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 2.6
     }, {
@@ -482,7 +482,7 @@
         "img": "/assets/img/books/Book_ConfessionsofaPaganNun_cover_001.gif",
         "rating": 2.6,
         "date": 751334741000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 2.8
     }, {
@@ -491,7 +491,7 @@
         "img": "/assets/img/books/Book_CoyotesIHaveKnown_cover_001.gif",
         "rating": 3.51,
         "date": 266489471000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.6
     }, {
@@ -500,7 +500,7 @@
         "img": "/assets/img/books/Book_CrazyButtocks_cover_001.gif",
         "rating": 1.57,
         "date": 709243357000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.8
     }, {
@@ -509,7 +509,7 @@
         "img": "/assets/img/books/Book_FabulousSMallJews_cover_001.gif",
         "rating": 1.67,
         "date": 443328645000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 3.1
     }, {
@@ -518,7 +518,7 @@
         "img": "/assets/img/books/Book_FancyCoffins_cover_001.gif",
         "rating": 1.24,
         "date": 624165755000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.0
     }, {
@@ -527,7 +527,7 @@
         "img": "/assets/img/books/Book_HistoryofConcrete_cover_001.gif",
         "rating": 4.22,
         "date": 786690205000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 3.0
     }, {
@@ -536,7 +536,7 @@
         "img": "/assets/img/books/Book_HowtoShitintheWoods_cover_001.gif",
         "rating": 1.57,
         "date": 470888838000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 3.9
     }, {
@@ -545,7 +545,7 @@
         "img": "/assets/img/books/Book_ItalianWithoutWords_cover_001.gif",
         "rating": 4.62,
         "date": 186747852000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.3
     }, {
@@ -554,7 +554,7 @@
         "img": "/assets/img/books/Book_JapaneseLunchbox_cover_001.gif",
         "rating": 1.76,
         "date": 544602944000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 3.1
     }, {
@@ -563,7 +563,7 @@
         "img": "/assets/img/books/Book_KnittingWithDogHair_cover_001.gif",
         "rating": 3.79,
         "date": 874397840000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 2.7
     }, {
@@ -572,7 +572,7 @@
         "img": "/assets/img/books/Book_KnowTheyreDead_cover_001.gif",
         "rating": 3.24,
         "date": 848298272000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.8
     }, {
@@ -581,7 +581,7 @@
         "img": "/assets/img/books/Book_Marmalade_cover_001.gif",
         "rating": 4.11,
         "date": 35015761000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 2.8
     }, {
@@ -590,7 +590,7 @@
         "img": "/assets/img/books/Book_ReadingToes_cover_001.gif",
         "rating": 3.97,
         "date": 501356600000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 2.1
     }, {
@@ -599,7 +599,7 @@
         "img": "/assets/img/books/Book_ReusingOldGraves_cover_001.gif",
         "rating": 3.35,
         "date": 763620932000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 3.7
     }, {
@@ -608,7 +608,7 @@
         "img": "/assets/img/books/Book_TeabagFolding_cover_001.gif",
         "rating": 1.51,
         "date": 735793876000,
-        "lang": 1,
+        "lang": 2,
         "description": "",
         "cost": 4.2
     }

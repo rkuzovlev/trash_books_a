@@ -3,27 +3,69 @@
 	<div class="field">
 		<label class="label">Cost $</label>
 		<p class="control small-controls range">
-			<input (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="costFrom" class="input" type="number" min="0" max="{{ filter.cost.to }}" [class.is-danger]="!filterForm.controls.costFrom.valid">
+			<input 
+				(change)="fieldIsChanged()" 
+				formControlName="costFrom" 
+				class="input" 
+				type="number" 
+				min="0" 
+				max="{{ filter.cost.to }}" 
+				[class.is-danger]="!filterForm.controls.costFrom.valid || filterForm.hasError('costIntersection')">
 			<span>–</span>
-			<input (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="costTo" class="input" type="number" min="{{ filter.cost.from }}" max="10" [class.is-danger]="!filterForm.controls.costTo.valid">
+			<input 
+				(change)="fieldIsChanged()" 
+				formControlName="costTo" 
+				class="input" 
+				type="number" 
+				min="{{ filter.cost.from }}" 
+				max="10" 
+				[class.is-danger]="!filterForm.controls.costTo.valid || filterForm.hasError('costIntersection')">
 		</p>
 	</div>
 
 	<div class="field">
 		<label class="label">Release date</label>
 		<p class="control small-controls range">
-			<input (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="dateFrom" class="input" type="number" min="1970" max="{{ filter.date.to }}" [class.is-danger]="!filterForm.controls.dateFrom.valid">
+			<input 
+				(change)="fieldIsChanged()" 
+				formControlName="dateFrom" 
+				class="input" 
+				type="number" 
+				min="1970" 
+				max="{{ filter.date.to }}" 
+				[class.is-danger]="!filterForm.controls.dateFrom.valid || filterForm.hasError('dateIntersection')">
 			<span>–</span>
-			<input (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="dateTo" class="input" type="number" min="{{ filter.date.from }}" max="2020" [class.is-danger]="!filterForm.controls.dateTo.valid">
+			<input 
+				(change)="fieldIsChanged()" 
+				formControlName="dateTo" 
+				class="input" 
+				type="number" 
+				min="{{ filter.date.from }}" 
+				max="2020" 
+				[class.is-danger]="!filterForm.controls.dateTo.valid || filterForm.hasError('dateIntersection')">
 		</p>
 	</div>
 
 	<div class="field">
 		<label class="label">Rating</label>
 		<p class="control small-controls range">
-			<input (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="ratingFrom" class="input" type="number" min="0" max="{{ filter.rating.to }}" [class.is-danger]="!filterForm.controls.ratingFrom.valid">
+			<input 
+				(change)="fieldIsChanged()" 
+				formControlName="ratingFrom" 
+				class="input" 
+				type="number" 
+				min="0" 
+				max="{{ filter.rating.to }}" 
+				[class.is-danger]="!filterForm.controls.ratingFrom.valid || filterForm.hasError('ratingIntersection')">
 			<span>–</span>
-			<input (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="ratingTo" class="input" type="number" min="{{ filter.rating.from }}" max="5" [class.is-danger]="!filterForm.controls.ratingTo.valid">
+			<input 
+				(change)="fieldIsChanged()" 
+				formControlName="ratingTo" 
+				class="input" 
+				type="number" 
+				min="{{ filter.rating.from }}" 
+				max="5" 
+				[class.is-danger]="!filterForm.controls.ratingTo.valid || filterForm.hasError('ratingIntersection')">
 		</p>
 	</div>
 
@@ -31,10 +73,11 @@
 		<label class="label">Language</label>
 		<p class="control is-expanded">
 			<span class="select is-fullwidth">
-				<select (change)="fieldIsChanged()" (keypress)="fieldIsChanged()" formControlName="lang">
+				<select (change)="fieldIsChanged()" 
+					formControlName="lang">
 					<option value="0">All</option>
-					<option value="1">Eng</option>
-					<option value="2">Rus</option>
+					<option value="1">Rus</option>
+					<option value="2">Eng</option>
 				</select>
 			</span>
 		</p>
