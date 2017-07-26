@@ -1,7 +1,15 @@
 <div class="columns">
-	<store-filter [filter]="filter" (changed)="filterChanged.emit($event)" class="column is-one-quarter"></store-filter>
+	<store-filter 
+		[filter]="filter$ | async" 
+		(changed)="onFilterChanged($event)" 
+		class="column is-one-quarter"
+	></store-filter>
 
 	<div class="column">
-		<store-list [filter]="filter" [books]="books" class="columns is-multiline is-desktop"></store-list> 
+		<store-list 
+			[filter]="filter$ | async" 
+			[books]="books$ | async" 
+			class="columns is-multiline is-desktop"
+		></store-list> 
 	</div>
 </div>

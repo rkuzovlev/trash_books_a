@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { StoreModule as NgRxStore } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { BooksEffects } from './_effects/books'
 
 import { AppComponent } from './_components/app/app.component';
@@ -14,13 +16,15 @@ import { SharedModule } from './shared.module';
 import { StoreModule } from './store/store.module';
 import { reducers, initialState } from './_reducers/index';
 
-import { ApiService } from './_services/api/api.service'
+import { ApiService } from './_services/api/api.service';
+import { AboutComponent } from './_components/about/about.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		NavComponent,
-		HomePageComponent
+		HomePageComponent,
+		AboutComponent
 	],
 	imports: [
 		CommonModule,
@@ -28,7 +32,8 @@ import { ApiService } from './_services/api/api.service'
 		NgRxStore.forRoot(reducers),
 		EffectsModule.forRoot([BooksEffects]),
 		BrowserModule,
-		StoreModule
+		StoreModule,
+		AppRoutingModule,		
 	],
 	providers: [ApiService],
 	bootstrap: [AppComponent]
