@@ -28,15 +28,15 @@ export const initialState: State = {
 		rating: { from: 0, to: 5 },
 		lang: BookLanguage.All
 	},
-	cartIDs: [10, 22],
+	cartIDs: [1, 2],
 	cartEntities: {
-		10: {
-			bookId: 10,
+		1: {
+			bookId: 1,
 			book: null,
 			count: 2
 		},
-		22: {
-			bookId: 22,
+		2: {
+			bookId: 2,
 			book: null,
 			count: 1
 		}
@@ -95,10 +95,10 @@ export function reducer(state = initialState, action: booksActions.Actions | car
 		}
 
 		case cartActions.ActionTypes.CART_DELETE_ITEM: {
-			const cartItemId = action.payload as number;
+			const bookId = action.payload as number;
 
 			let cartIDs = [ ...state.cartIDs ];
-			let foundIndex = cartIDs.indexOf(cartItemId);
+			let foundIndex = cartIDs.indexOf(bookId);
 			if (foundIndex == -1){
 				return state;
 			}
@@ -109,9 +109,39 @@ export function reducer(state = initialState, action: booksActions.Actions | car
 			];
 
 			let cartEntities = { ...state.cartEntities };
-			delete cartEntities[cartItemId];
+			delete cartEntities[bookId];
 
 			return Object.assign({}, state, { cartEntities, cartIDs });
+		}
+
+		case cartActions.ActionTypes.CART_ADD_ITEM: {
+			const bookId = action.payload as number;
+
+			let book = state.entities[bookId];
+
+			if (!book){
+				return state;
+			}
+
+			let cartIdsIndex = state.cartIDs.indexOf(bookId);
+			let newCartIDs = state.cartIDs;
+			if (cartIdsIndex == -1){
+				newCartIDs = [ ...state.cartIDs ];
+				newCartIDs.push(bookId);
+			}
+
+			let cartEntities = { ...state.cartEntities };
+			if (cartEntities[bookId]){
+				cartEntities[bookId] = { ...cartEntities[bookId], count: cartEntities[bookId].count + 1 }
+			} else {
+				cartEntities[bookId] = {
+					book: null,
+					bookId: bookId,
+					count: 1
+				}
+			}
+
+			return Object.assign({}, state, { cartEntities, cartIDs: newCartIDs });
 		}
 
 

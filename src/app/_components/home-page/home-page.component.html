@@ -9,6 +9,8 @@
 		<store-list 
 			[filter]="filter$ | async" 
 			[books]="books$ | async" 
+			[cartEntities]="cartEntities$ | async"
+			(addBookToCart)="onAddBookToCart($event)"
 			class="columns is-multiline is-desktop"
 		></store-list> 
 	</div>

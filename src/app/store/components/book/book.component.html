@@ -17,6 +17,7 @@
 		</div>
 	</div>
 	<footer class="card-footer">
-		<a class="card-footer-item">Add to cart</a>
+		<a *ngIf="countInCart > 0" (click)="addToCart.emit()" class="card-footer-item">Add one more ({{ countInCart }})</a>
+		<a *ngIf="countInCart == 0" (click)="addToCart.emit()" class="card-footer-item">Add to cart</a>
 	</footer>
 </div>
