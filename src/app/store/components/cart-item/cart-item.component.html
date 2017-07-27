@@ -1,0 +1,5 @@
+<td>{{ item.book.title }}</td>
+<td>{{ item.book.cost }}</td>
+<td><input class="input item-count" #countInput type="number" (change)="onItemCountChange(item.id, countInput.value)"  value="{{ item.count }}" min="0"></td>
+<td>{{ item.book.cost * item.count | currency:'USD':true }}</td>
+<td><a class="delete" (click)="onItemDelete(item.id)"></a></td>

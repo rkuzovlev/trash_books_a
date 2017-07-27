@@ -1,18 +1,22 @@
 import { createSelector } from '@ngrx/store';
 import { Book, BookLanguage } from '../_models/book';
 
-import * as books from '../_actions/books';
+import * as booksActions from '../_actions/books';
+import * as cartActions from '../_actions/cart';
 
-import { FilterRange, Filter } from '../_models/filter';
+import { iFilterRange, iFilter } from '../_models/filter';
+import { iCartEntities, iCartEntity, iCartCountChange } from '../_models/cart';
 
-export interface BookEntities {
+export interface iBookEntities {
 	[id: number]: Book;
 }
 
 export interface State {
 	ids: number[];
-	entities: BookEntities;
-	filter: Filter
+	entities: iBookEntities;
+	filter: iFilter;
+	cartIDs: number[];
+	cartEntities: iCartEntities;
 };
 
 export const initialState: State = {
@@ -23,16 +27,31 @@ export const initialState: State = {
 		date: { from: 1970, to: 2020 },
 		rating: { from: 0, to: 5 },
 		lang: BookLanguage.All
+	},
+	cartIDs: [1, 2],
+	cartEntities: {
+		1: {
+			id: 1,
+			bookId: 1,
+			book: null,
+			count: 2
+		},
+		2: {
+			id: 2,
+			bookId: 2,
+			book: null,
+			count: 1
+		}
 	}
 };
 
-export function reducer(state = initialState, action: books.Actions): State {
+export function reducer(state = initialState, action: booksActions.Actions | cartActions.Actions): State {
 	switch (action.type) {
-		case books.ActionTypes.LOAD_BOOKS_SUCCESS: {
+		case booksActions.ActionTypes.LOAD_BOOKS_SUCCESS: {
 			const newBooks = action.payload as Book[];
 
 			const newBookIds = newBooks.map(book => book.id);
-			const newBookEntities = newBooks.reduce((entities: BookEntities, book: Book) => {
+			const newBookEntities = newBooks.reduce((entities: iBookEntities, book: Book) => {
 				return Object.assign(entities, {
 					[book.id]: book
 				});
@@ -46,7 +65,7 @@ export function reducer(state = initialState, action: books.Actions): State {
 			return Object.assign({}, state, storeDif)
 		}
 
-		case books.ActionTypes.ADD_BOOK: {
+		case booksActions.ActionTypes.ADD_BOOK: {
 			const book = action.payload as Book;
 
 			var storeDif = {
@@ -61,10 +80,20 @@ export function reducer(state = initialState, action: books.Actions): State {
 			return Object.assign({}, state, storeDif)
 		}
 
-		case books.ActionTypes.CHANGE_FILTER: {
-			const filter = action.payload as Filter;
+		case booksActions.ActionTypes.CHANGE_FILTER: {
+			const filter = action.payload as iFilter;
 
 			return Object.assign({}, state, { filter })
+		}
+
+		case cartActions.ActionTypes.CART_CHANGE_ITEM_COUNT: {
+			const countChange = action.payload as iCartCountChange;
+
+			let cartEntities = { ...state.cartEntities };
+
+			cartEntities[countChange.cartId] = Object.assign({}, cartEntities[countChange.cartId], { count: countChange.count } );
+
+			return Object.assign({}, state, { cartEntities })
 		}
 
 
@@ -77,8 +106,18 @@ export function reducer(state = initialState, action: books.Actions): State {
 
 export const getEntities = (state: State) => state.entities;
 export const getIds = (state: State) => state.ids;
-export const getFilter = (state: State) => state.filter;
-
 export const getBooks = createSelector(getEntities, getIds, (entities, ids) => {
 	return ids.map(id => entities[id]);
+});
+
+export const getFilter = (state: State) => state.filter;
+
+export const getCartEntities = (state: State) => state.cartEntities;
+export const getCartIDs = (state: State) => state.cartIDs;
+export const getCart = createSelector(getEntities, getCartEntities, getCartIDs, (bookEntities, cartEntities, ids) => {
+	let insertBook = (cartItem) => {
+		cartItem.book = bookEntities[cartItem.bookId];
+		return cartItem;
+	}
+	return ids.map(id => cartEntities[id]).map(insertBook).filter(cartItem => cartItem.book);
 });

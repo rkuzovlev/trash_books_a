@@ -2,7 +2,7 @@ import { Action } from '@ngrx/store';
 import { Book } from '../_models/book';
 import { type } from '../utils';
 
-import { Filter } from '../_models/filter';
+import { iFilter } from '../_models/filter';
 
 export const ActionTypes = {
 	ADD_BOOK:		    type('[Books] Add book'),
@@ -46,7 +46,7 @@ export class LoadBooksSuccessAction implements Action {
 
 export class ChangeFilterAction implements Action {
 	type = ActionTypes.CHANGE_FILTER;
-	constructor(public payload: Filter) { }
+	constructor(public payload: iFilter) { }
 }
 
 export type Actions

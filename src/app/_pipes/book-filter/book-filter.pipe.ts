@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 import { Book, BookLanguage } from './../../_models/book';
-import { Filter } from './../../_models/filter';
+import { iFilter } from './../../_models/filter';
 
-export let bookFilter = function(book: Book, filter: Filter): boolean {
+export let bookFilter = function(book: Book, filter: iFilter): boolean {
 	let year = (new Date(book.date)).getFullYear();
 
 	if (book.cost >= filter.cost.from &&
@@ -27,7 +27,7 @@ export let bookFilter = function(book: Book, filter: Filter): boolean {
 	name: 'bookFilter'
 })
 export class BookFilterPipe implements PipeTransform {
-	transform(books: Book[], filter: Filter): any {
+	transform(books: Book[], filter: iFilter): any {
 		return books.filter(book => bookFilter(book, filter));
 	}
 }

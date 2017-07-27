@@ -1,12 +1,7 @@
 <div class="container">
-	<app-nav></app-nav>
+	<app-nav [cart]="cart$ | async"></app-nav>
 
 	<div class="section">
 		<router-outlet></router-outlet>
-		<!-- <app-home-page 
-			[filter]="filter$ | async" 
-			[books]="books$ | async"
-			(filterChanged)="onFilterChanged($event)"
-		></app-home-page> -->
 	</div>
 </div>

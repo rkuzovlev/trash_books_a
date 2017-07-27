@@ -11,6 +11,8 @@ import { ListComponent }		from './components/list/list.component';
 import { CartSmallComponent } 	from './components/cart-small/cart-small.component';
 import { RatingComponent }		from './components/rating/rating.component';
 import { BookComponent } 		from './components/book/book.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 import { BookService } from './services/book/book.service';
 
@@ -26,8 +28,8 @@ import * as booksActions from './../_actions/books';
 		FormsModule,
 		ReactiveFormsModule,
 	],
-	declarations: [FilterComponent, ListComponent, CartSmallComponent, RatingComponent, BookComponent],
-	exports: [FilterComponent, ListComponent, CartSmallComponent],
+	declarations: [FilterComponent, ListComponent, CartSmallComponent, RatingComponent, BookComponent, CartComponent, CartItemComponent],
+	exports: [FilterComponent, ListComponent, CartSmallComponent, CartComponent],
 	providers: [BookService]
 })
 export class StoreModule {

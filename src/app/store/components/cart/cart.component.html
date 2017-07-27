@@ -1,0 +1,38 @@
+<div *ngIf="cart && cart.length > 0">
+     <h2 class="title is-4">Cart</h2>
+
+      <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th width="40px">Cost</th>
+                    <th width="40px">Count</th>
+                    <th width="40px">Sum</th>
+                    <th width="40px"></th>
+                </tr>
+            </thead>
+            <tbody>
+				<tr store-cart-item 
+					*ngFor="let item of cart; trackBy: trackCart" 
+					[item]="item" 
+					(countChanged)="countChanged.emit($event)"
+				></tr>
+            </tbody>
+        </table>
+    </div>
+
+     <nav class="level">
+        <div class="level-left"></div>
+        <div class="level-right">
+            <p class="level-item">
+				<strong ng-controller="StoreCartTotalController">Total {{ totalCost | currency:'USD':true }}</strong>
+			</p>
+            <p class="level-item">
+				<a [attr.disabled]="totalCost == 0 ? true : null" class="button is-success">BUY</a>
+			</p>
+        </div>
+    </nav>  
+</div>
+
+<h3 class="title is-3 has-text-centered" *ngIf="!cart || cart.length == 0">Cart is empty</h3>

@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { Filter } from './../../../_models/filter';
+import { iFilter } from './../../../_models/filter';
 import { BookLanguage } from './../../../_models/book';
 import { filterValidator } from './../../../_validators/filter-range/filter-range.validator';
 
@@ -16,7 +16,7 @@ const MIN_DATE = 1970;
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FilterComponent implements OnInit, OnChanges {
-	@Input() filter: Filter;
+	@Input() filter: iFilter;
 	@Output() changed = new EventEmitter();
 
 	filterForm: FormGroup
@@ -33,9 +33,9 @@ export class FilterComponent implements OnInit, OnChanges {
 		}, filterValidator());
 	}
 
-	getNewFilterValue(): Filter {
+	getNewFilterValue(): iFilter {
 		let val = this.filterForm.value;
-		let newFilter: Filter = {
+		let newFilter: iFilter = {
 			cost: { from: val.costFrom, to: val.costTo },
 			date: { from: val.dateFrom, to: val.dateTo },
 			rating: { from: val.ratingFrom, to: val.ratingTo },

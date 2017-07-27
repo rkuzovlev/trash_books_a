@@ -1,13 +1,13 @@
 import { BookLanguage } from './book';
 
-export interface FilterRange {
+export interface iFilterRange {
 	from: number;
 	to: number;
 }
 
-export interface Filter {
-	cost: FilterRange;
-	date: FilterRange;
-	rating: FilterRange;
+export interface iFilter {
+	cost: iFilterRange;
+	date: iFilterRange;
+	rating: iFilterRange;
 	lang: BookLanguage;
 }
