@@ -19,7 +19,7 @@ export class CartSmallComponent implements OnInit, OnChanges {
 		this.totalCost = 0;
 		this.cart.forEach((item) => {
 			this.countItems += item.count;
-			this.totalCost += item.book.cost;
+			this.totalCost += item.book.cost * item.count;
 		});
 	}
 

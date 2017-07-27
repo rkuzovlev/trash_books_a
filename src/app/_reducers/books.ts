@@ -96,6 +96,26 @@ export function reducer(state = initialState, action: booksActions.Actions | car
 			return Object.assign({}, state, { cartEntities })
 		}
 
+		case cartActions.ActionTypes.CART_DELETE_ITEM: {
+			const cartItemId = action.payload as number;
+
+			let cartIDs = [ ...state.cartIDs ];
+			let foundIndex = cartIDs.indexOf(cartItemId);
+			if (foundIndex == -1){
+				return state;
+			}
+
+			cartIDs = [
+				...cartIDs.slice(0, foundIndex), 
+				...cartIDs.slice(foundIndex + 1)
+			];
+
+			let cartEntities = { ...state.cartEntities };
+			delete cartEntities[cartItemId];
+
+			return Object.assign({}, state, { cartEntities, cartIDs });
+		}
+
 
 		default: {
 			return state;

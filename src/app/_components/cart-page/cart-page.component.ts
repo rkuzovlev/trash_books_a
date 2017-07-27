@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 
 import { iCartEntities, iCartEntity, iCartCountChange } from './../../_models/cart';
 import * as reducers from '../../_reducers';
-import { ChangeItemCountAction } from './../../_actions/cart';
+import { ChangeItemCountAction, DeleteItemAction } from './../../_actions/cart';
 
 @Component({
 	selector: 'app-cart-page',
@@ -17,6 +17,10 @@ export class CartPageComponent implements OnInit {
 	constructor(
 		private store: Store<reducers.State>
 	) { }
+
+	onCartItemDelete(cartItemId: number){
+		this.store.dispatch(new DeleteItemAction(cartItemId));
+	}
 
 	onCartItemCountChanged(newCount: iCartCountChange){
 		this.store.dispatch(new ChangeItemCountAction(newCount));

@@ -10,6 +10,7 @@ import { iCartEntities, iCartEntity, iCartCountChange, CartCountChange } from '.
 export class CartComponent implements OnInit, OnChanges {
 	@Input() cart: iCartEntity[];
 	@Output() countChanged: EventEmitter<iCartCountChange> = new EventEmitter();
+	@Output() deleteCartItem: EventEmitter<number> = new EventEmitter();
 
 	totalCost: number;
 

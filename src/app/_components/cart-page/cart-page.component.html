@@ -1,1 +1,5 @@
-<store-cart [cart]="cart$ | async" (countChanged)="onCartItemCountChanged($event)"></store-cart>
+<store-cart 
+    [cart]="cart$ | async" 
+    (countChanged)="onCartItemCountChanged($event)"
+    (deleteCartItem)="onCartItemDelete($event)"
+></store-cart>
