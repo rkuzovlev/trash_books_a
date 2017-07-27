@@ -21,7 +21,7 @@ export class CartComponent implements OnInit, OnChanges {
 	}
 
 	trackCart(index, cart: iCartEntity) {
-		return cart.id;
+		return cart.bookId;
 	}
 
 	ngOnInit() {

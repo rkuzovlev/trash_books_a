@@ -14,8 +14,8 @@ export class CartItemComponent implements OnInit {
 
 	constructor() { }
 
-	onItemCountChange(cartItemId, count) {
-		this.countChanged.emit(new CartCountChange(cartItemId, parseInt(count)));
+	onItemCountChange(bookId, count) {
+		this.countChanged.emit(new CartCountChange(bookId, parseInt(count)));
 	}
 
 	ngOnInit() {

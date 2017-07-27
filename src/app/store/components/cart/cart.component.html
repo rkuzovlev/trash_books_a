@@ -17,7 +17,7 @@
 					*ngFor="let item of cart; trackBy: trackCart" 
 					[item]="item" 
 					(countChanged)="countChanged.emit($event)"
-					(delete)="deleteCartItem.emit(item.id)"
+					(delete)="deleteCartItem.emit(item.bookId)"
 				></tr>
             </tbody>
         </table>

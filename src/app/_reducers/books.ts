@@ -28,17 +28,15 @@ export const initialState: State = {
 		rating: { from: 0, to: 5 },
 		lang: BookLanguage.All
 	},
-	cartIDs: [1, 2],
+	cartIDs: [10, 22],
 	cartEntities: {
-		1: {
-			id: 1,
-			bookId: 1,
+		10: {
+			bookId: 10,
 			book: null,
 			count: 2
 		},
-		2: {
-			id: 2,
-			bookId: 2,
+		22: {
+			bookId: 22,
 			book: null,
 			count: 1
 		}
@@ -91,7 +89,7 @@ export function reducer(state = initialState, action: booksActions.Actions | car
 
 			let cartEntities = { ...state.cartEntities };
 
-			cartEntities[countChange.cartId] = Object.assign({}, cartEntities[countChange.cartId], { count: countChange.count } );
+			cartEntities[countChange.bookId] = Object.assign({}, cartEntities[countChange.bookId], { count: countChange.count } );
 
 			return Object.assign({}, state, { cartEntities })
 		}
