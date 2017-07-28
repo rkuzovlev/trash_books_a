@@ -22,6 +22,8 @@ export const initialState: State = {
 
 export let booksState = (state: State) => state.books;
 export let booksGetBooks = createSelector(booksState, fromBooks.getBooks);
+export let booksGetFilteredBooks = createSelector(booksState, fromBooks.getFilteredBooks);
 export let booksGetFilter = createSelector(booksState, fromBooks.getFilter);
 export let booksGetCart = createSelector(booksState, fromBooks.getCart);
 export let booksGetCartEntities = createSelector(booksState, fromBooks.getCartEntities);
+export let booksGetPaginationPage = createSelector(booksState, fromBooks.getPaginationPage);

@@ -1,9 +1,10 @@
 import { createSelector } from '@ngrx/store';
-import { Book, BookLanguage } from '../_models/book';
 
 import * as booksActions from '../_actions/books';
 import * as cartActions from '../_actions/cart';
 
+import { Book, BookLanguage } from '../_models/book';
+import { iPagination } from '../_models/pagination';
 import { iFilterRange, iFilter } from '../_models/filter';
 import { iCartEntities, iCartEntity, iCartCountChange } from '../_models/cart';
 
@@ -17,6 +18,7 @@ export interface State {
 	filter: iFilter;
 	cartIDs: number[];
 	cartEntities: iCartEntities;
+	paginationPage: number;
 };
 
 export const initialState: State = {
@@ -28,19 +30,9 @@ export const initialState: State = {
 		rating: { from: 0, to: 5 },
 		lang: BookLanguage.All
 	},
-	cartIDs: [1, 2],
-	cartEntities: {
-		1: {
-			bookId: 1,
-			book: null,
-			count: 2
-		},
-		2: {
-			bookId: 2,
-			book: null,
-			count: 1
-		}
-	}
+	cartIDs: [],
+	cartEntities: {},
+	paginationPage: 1
 };
 
 export function reducer(state = initialState, action: booksActions.Actions | cartActions.Actions): State {
@@ -144,6 +136,12 @@ export function reducer(state = initialState, action: booksActions.Actions | car
 			return Object.assign({}, state, { cartEntities, cartIDs: newCartIDs });
 		}
 
+		case booksActions.ActionTypes.CHANGE_PAGE: {
+			const newPage = action.payload as number;
+
+			return Object.assign({}, state, { paginationPage: newPage });
+		}
+
 
 		default: {
 			return state;
@@ -152,6 +150,26 @@ export function reducer(state = initialState, action: booksActions.Actions | car
 }
 
 
+let bookFilter = function(book: Book, filter: iFilter): boolean {
+	let year = (new Date(book.date)).getFullYear();
+
+	if (book.cost >= filter.cost.from &&
+		book.cost <= filter.cost.to &&
+		
+		book.rating >= filter.rating.from &&
+		book.rating <= filter.rating.to &&
+		
+		year >= filter.date.from &&
+		year <= filter.date.to &&
+
+		(filter.lang == BookLanguage.All || book.lang == filter.lang)
+	) {
+		return true;
+	}
+
+	return false;
+}
+
 export const getEntities = (state: State) => state.entities;
 export const getIds = (state: State) => state.ids;
 export const getBooks = createSelector(getEntities, getIds, (entities, ids) => {
@@ -159,6 +177,12 @@ export const getBooks = createSelector(getEntities, getIds, (entities, ids) => {
 });
 
 export const getFilter = (state: State) => state.filter;
+
+export const getFilteredBooks = createSelector(getBooks, getFilter, (books, filter) => {
+	return books.filter(book => bookFilter(book, filter));
+});
+
+export const getPaginationPage = (state: State) => state.paginationPage;
 
 export const getCartEntities = (state: State) => state.cartEntities;
 export const getCartIDs = (state: State) => state.cartIDs;

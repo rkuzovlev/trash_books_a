@@ -11,7 +11,6 @@ import { iCartEntities } from './../../../_models/cart';
 })
 export class ListComponent implements OnInit, OnChanges {
 	@Input() books: Book[]
-	@Input() filter: iFilter;
 	@Input() cartEntities: iCartEntities;
 	@Output() addBookToCart: EventEmitter<number> = new EventEmitter();
 

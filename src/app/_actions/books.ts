@@ -13,6 +13,8 @@ export const ActionTypes = {
 	LOAD_BOOKS_ERROR:	type('[Books] Load books error'),
 	
 	CHANGE_FILTER:		type('[Books] Change filter'),
+
+	CHANGE_PAGE:		type('[Books] Change page'),
 };
 
 export class AddBookAction implements Action {
@@ -25,7 +27,10 @@ export class AddBooksAction implements Action {
 	constructor(public payload: Book[]) { }
 }
 
-
+export class ChangePageAction implements Action {
+	type = ActionTypes.CHANGE_PAGE;
+	constructor(public payload: number) { }
+}
 
 export class LoadBooksAction implements Action {
     type = ActionTypes.LOAD_BOOKS;

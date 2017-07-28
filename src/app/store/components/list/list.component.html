@@ -1,5 +1,5 @@
 <store-book 
-	*ngFor="let book of books | bookFilter:filter; trackBy:trackBooks" 
+	*ngFor="let book of books; trackBy:trackBooks"
 	[book]="book" 
 	[countInCart]="getCountInCartForBook(book.id)"
 	(addToCart)="addBookToCart.emit(book.id)"

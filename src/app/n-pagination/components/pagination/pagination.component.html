@@ -1,0 +1,11 @@
+<nav *ngIf="!(hide && autoHide)" class="pagination is-centered">
+	<a *ngIf="showNextPrev" [attr.disabled]="page == 1 ? true : null" (click)="page > 1 ? onPageChange(page - 1) : null" class="pagination-previous">Previous</a>
+	<a *ngIf="showNextPrev" [attr.disabled]="page == pages ? true : null" (click)="page < pages ? onPageChange(page + 1) : null" class="pagination-next">Next page</a>
+	<ul class="pagination-list">
+		<li [class.hide]="start > 2 && !showFirstLast ? true : null" *ngIf="start > 1"><a (click)="onPageChange(1)" class="pagination-link">1</a></li>
+		<li [class.hide]="start > 2 && !showFirstLast ? true : null" *ngIf="start > 2"><span class="pagination-ellipsis">&hellip;</span></li>
+		<li *ngFor="let p of pageButtons"><a (click)="onPageChange(p)" class="pagination-link" [class.is-current]="p == page ? true : null">{{ p }}</a></li>
+		<li [class.hide]="end < pages && !showFirstLast ? true : null" *ngIf="end + 1 < pages"><span class="pagination-ellipsis">&hellip;</span></li>
+		<li [class.hide]="end < pages && !showFirstLast ? true : null" *ngIf="end < pages"><a (click)="onPageChange(pages)" class="pagination-link">{{ pages }}</a></li>
+	</ul>
+</nav>

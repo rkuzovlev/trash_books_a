@@ -7,11 +7,12 @@
 
 	<div class="column">
 		<store-list 
-			[filter]="filter$ | async" 
-			[books]="books$ | async" 
+			[books]="books$ | async | NPagination:{page: paginationPage, itemsOnPage: 9}"
 			[cartEntities]="cartEntities$ | async"
 			(addBookToCart)="onAddBookToCart($event)"
 			class="columns is-multiline is-desktop"
-		></store-list> 
+		></store-list>
+
+		<n-pagination [page]="paginationPage" (pageChanged)="onPageChanged($event)" [itemsOnPage]="9" [items]="books$ | async"></n-pagination>
 	</div>
 </div>

@@ -5,8 +5,6 @@ import { StoreModule as NgRxStore } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { AppRoutingModule } from './app-routing.module';
-
 import { BooksEffects } from './_effects/books'
 
 import { AppComponent } from './_components/app/app.component';
@@ -17,6 +15,9 @@ import { CartPageComponent } from './_components/cart-page/cart-page.component';
 
 import { SharedModule } from './shared.module';
 import { StoreModule } from './store/store.module';
+import { AppRoutingModule } from './app-routing.module';
+import { NPaginationModule } from './n-pagination/n-pagination.module';
+
 import { reducers, initialState } from './_reducers/index';
 
 import { ApiService } from './_services/api/api.service';
@@ -30,6 +31,7 @@ import { ApiService } from './_services/api/api.service';
 		CartPageComponent
 	],
 	imports: [
+		NPaginationModule,
 		CommonModule,
 		SharedModule,
 		NgRxStore.forRoot(reducers),
